@@ -206,6 +206,8 @@
 // }
 // console.log(foo('red'));
 
+//!=================================================
+
 // for (let i = 1; i <= 10; i++) {
 //     console.log(i);
 // }
@@ -275,24 +277,233 @@
 // }
 // console.log(foo([1,2,3,4,5,6,7,8]));
 
-3-1 //!====
+//!=================================================
+
+// function foo(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i]);
+//     }
+// }
+// console.log(foo([10,20,30,40,50]));
+
+// function foo(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             console.log(arr[i]);
+//             }
+//     }
+// }
+// console.log(foo([1,2,3,4,5,6]));
+
+// function foo(arr, max) {
+//     for (const item of arr) {
+//         if (item > max) {
+//         console.log(item)
+//     }
+// }
+// }
+// console.log(foo([1,2,3,4,5,6],3));
+
+// function foo(arr) {
+//     let sum = 0;
+//     for (const item of arr) {
+//         sum += item;
+//     }
+//     return sum;
+// }
+// console.log(foo([1,2,3,4]));
+
+// function foo(arr, value) {
+//     let result = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === value) {
+//         result++;
+//     } 
+//     }
+//     return result;
+// }
+// console.log(foo([1,2,3,4,4,4,5,6,7,3],4));
+
+// function foo(array) {
+//     const newArray = [];
+// for (let i = 0; i < array.length; i++) {
+//     if (array[i] > 0) {
+//         newArray.push(array[i])
+//     }
+    
+//     }
+//     return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3]));
 
 // function foo() {
+    
 
 // }
-// console.log(foo());
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+
+// function foo(array) {
+//     const newArray = [];
+//     for (const item of array) {
+//         if (item.length < 6) {
+//             newArray.push(item.toLowerCase());
+//         } else {
+//             newArray.push(item.toUpperCase());
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(foo(['Hello', 'World', 'Javascript', 'eye']));
+
+// function foo(array) {
+//     const newArray = [];
+//     for (const item of array) {
+//         if (item > 0) {
+//             newArray.push(item);
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+
+// function foo(array) {
+//     const newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         newArray.push(array[i] * i);
+//     }
+
+// return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+
+// function foo(array) {
+//     const newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] % 3 === 0) {
+//             newArray.push(array[i]);
+//         }
+        
+//     }
+//     return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
+//Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив 
+//де будуть лише ті елементи які зустрічаються і в arr1 і arr2.
+
+// function foo(arr1, arr2) {
+//     const newArray = [];
+//     for (const item of arr1) {
+//         if (arr2.includes(item)) {
+//             newArray.push(item);
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49], [44,45,46,47,48,49,]));
+//!====================================================
+//Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив 
+//де будуть лише елементи масиву arr1 яких не має у масиві arr2.
+
+// function foo(arr1, arr2) {
+//     const newArray = [];
+//     for (const item of arr1) {
+//         if (!arr2.includes(item)) {
+//             newArray.push(item);
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49], [1,44,45,46,47,48,49,]));
+//!====================================================
+//Напиши функцію яка приймає масив та знаходить мінімальний елемент.
+
+// function foo(arr) {
+//     let min = arr[0];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < min) {
+//             min = arr[i];
+//         }       
+//     }
+//     return min;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
+//Напиши функцію яка приймає масив та знаходить максимальний елемент.
+
+// function foo(arr) {
+//     return Math.max(...arr);
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
+//Напиши функцію яка приймає масив та повертає масив лише з тих елементів які більші за середнє значення всіх елементів масиву.
+
+// function foo(array) {
+//     let sum = 0;
+//      for (let i = 0; i < array.length; i++) {
+//          sum += array[i];
+//     }
+
+// let avarage = sum / array.length;
+// const newArray = [];
+// for (let i = 0; i < array.length; i++) {
+//     if (array[i] > avarage) {
+//         newArray.push(array[i]);
+//     }
+// }
+//     return newArray;
+// }
+
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
+//Напиши функцію яка приймає масив та повертає масив лише з тих елементів які більші за власний індекс.
+
+// function foo(array) {
+//     const newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] > i) {
+//             newArray.push(array[i]);
+//         }
+        
+//     }
+//     return newArray;
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
+//Напиши функцію яка приймає два параметри start та end. Функія повина повернути масив де будуть числа з діапазону 
+//але лише ті у яких не має цифри 5. К прикладу числа(51, 25, 15, 256) не підходять бо містять символ "5" у собі.
+
+// function foo(start, end) {
+//     const newArray = [];
+//     for (let i = start; i <= end; i++) {
+//         if (!i.toString().includes(5))
+//             newArray.push(i);
+//     }
+//     return newArray;
+// }
+// console.log(foo(1,8));
+// //!====================================================
+//Напиши функцію, яка приймає массив чисел і повертає новий масив, 
+//де всі парні числа переміщені в початок, а всі непарні - в кінець.
+
+// function foo(arr) {
+//     const evens = arr.filter(number => number % 2 === 0);
+//     const odds = arr.filter(number => number % 2 !== 0);
+//     return [...evens, ...odds];
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
+//Напиши функцію, яка приймає массив чисел і повертає новий массив, де елементи відсортовані в порядку збільшення або зменшення.
+
+// function foo(arr) {
+//     return arr.slice().sort((a, b) => a - b);
+// }
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
 
 // function foo() {
-
+//     const newArray = [];
 // }
-// console.log(foo());
+// console.log(foo([1,-1,2,-2,3,-3,10,-30,44,49]));
+//!====================================================
 
-// function foo() {
-
-// }
-// console.log(foo());
-
-// function foo() {
-
-// }
-// console.log(foo());
