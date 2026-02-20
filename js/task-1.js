@@ -535,20 +535,20 @@
 // }
 // console.log(foo(0, 10));
 //!====================================================
-const person = {
-    name: 'Roman',
-    age: 13,
-    proffesion: 'student',
-}
-person.age = 25;
-person.work = 'school';
-delete person.proffesion;
+//Напиши функцію, яка приймає рядок і повертає кількість слів у ньому (слова розділені пробілами).
 
-console.log('proffesion' in person);
-console.log(person);
-
+// function createObj(name, age) {
+//     return {
+//         name: name,
+//         age: age
+//     };
+// }
+// console.log(createPerson("Ігор", 25));
 
 //!====================================================
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const filteredNumbers = numbers.filter(number => number > 4);
+// console.log(filteredNumbers);
 
 //!====================================================
 
