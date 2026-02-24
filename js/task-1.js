@@ -549,11 +549,274 @@
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // const filteredNumbers = numbers.filter(number => number > 4);
 // console.log(filteredNumbers);
-
 //!====================================================
+//Створи функцію, яка приймає масив чисел і повертає новий масив, де кожне число збільшене на 5.
 
+// function foo(arr1) {
+//   const newArr = arr1.map(item => item + 5);
+//   return newArr;
+// }
+// console.log(foo([1, 2, 3, 4, 5]));
 //!====================================================
+//Є масив рядків. Поверни новий масив, де всі слова записані у верхньому регістрі..
 
+// function foo(arr1) {
+//   const newArr = arr1.map(item => item.toUpperCase());
+//   return newArr;
+// }
+// console.log(foo(["hello", "World"]));
 //!====================================================
+//Напиши функцію, яка приймає масив чисел і повертає новий масив лише з додатними числами.
 
+// function foo(arr) {
+//   return arr.filter(num => num > 0);
+// }
+// console.log(foo([1, -2, 3, -4, 5]));
 //!====================================================
+//Є масив рядків. Поверни тільки ті слова, довжина яких більша за 4 символи.
+
+// function foo(arr) {
+//   return arr.filter(num => num.length > 4);
+// }
+// console.log(foo(["hell", "World"]));
+//!====================================================
+//Знайди перше число в масиві, яке більше за 10.
+
+// function foo(arr) {
+//   return arr.find(num => num === 10)
+// }
+// console.log(foo([1, -2, 3, -4, 5, 10, -100, 15]));
+//!====================================================
+//Перевір, чи є в масиві хоча б одне число менше за 0.
+
+// function foo(arr) {
+//   return arr.some(num => num < 0);
+// }
+// console.log(foo([1, -2, 3, -4, 5, 10, -100, 15]));
+//!====================================================
+//Перевір, чи всі елементи масиву є числами.
+
+// function foo(arr) {
+//   return arr.every(num => typeof num === "number");
+// }
+// console.log(foo([1, -2, 3, -4, 5, 10, -100, 15]));
+//!====================================================
+//Перевір, чи містить масив рядків слово "admin".
+
+// function foo(arr) {
+//   return arr.includes("Hello");
+// }
+// console.log(foo(["Hello", "World"]));
+//!====================================================
+//Є масив чисел.
+// Спочатку залиш тільки парні числа (filter),
+// потім помнож кожне на 2 (map).
+
+// function foo(arr) {
+//   return arr.filter(num => num % 2 === 0).map(num => num * 2);
+// }
+// console.log(foo([1, -2, 3, -4, 5, 10, -100, 15]));
+//!====================================================
+//Напиши функцію, яка обчислює суму всіх чисел у масиві.
+
+// function foo(arr) {
+//     return arr.reduce((acc, num) => acc + num)
+// }
+// console.log(foo([1, 3, 5, 10, 15]));
+//!====================================================
+//Перевір, чи містить масив рядків слово "admin".
+
+// function foo(arr) {
+//     return arr.includes("admin")
+// }
+// console.log(foo(["Hello", "World", "admin"]));
+//!====================================================
+//Поверни новий масив лише з іменами користувачів.
+
+// const users = [
+//   { name: "Іван", age: 25 },
+//   { name: "Марія", age: 17 },
+//   { name: "Олег", age: 30 }
+// ]
+// function userNames(arr) {
+//     return arr.map(user => user.name)
+// }
+// console.log(userNames(users));
+//!====================================================
+//Є масив чисел.
+//Поверни новий масив чисел, які більші за середнє значення всіх елементів масиву.
+
+// function foo(arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+//     const average = sum / arr.length;
+//     return arr.filter(num => num > average);
+// }
+// console.log(foo([1, 3, 5, 10, 15]));
+//!====================================================
+//Напиши функцію, яка знаходить найбільше число в масиві через reduce.
+
+// function foo(arr) {
+//     return arr.reduce((max, current) => {
+//         if (current > max) {
+//             return current;
+//         }
+//         return max;
+//     });
+// }
+// console.log(foo([1, 3, 5, 10, 15]));
+//!====================================================
+//Перевір, чи є в масиві рядків хоча б одне слово, яке починається з великої літери.
+
+// function findBigLetter(arr) {
+//     return arr.some(word => word[0] === word[0].toUpperCase());
+// }
+// console.log(findBigLetter(["hello", "world", "admin"]));
+//!====================================================
+//Перевір, чи всі рядки в масиві мають довжину більше 3 символів.
+
+// function foo(arr) {
+//     return arr.every(str => str.length > 3);
+// }
+// console.log(foo(["Hello", "World", "admin"]));
+//!====================================================
+//Є масив чисел.Спочатку залиш тільки непарні числа, потім перетвори їх у квадрат.
+
+// function foo(arr) {
+//     return arr.filter(num => num % 2 !== 0).map(num => num **2);
+// }
+// console.log(foo([1, 3, 5, 10, 15]));
+//!====================================================
+//Знайди перший об’єкт у масиві користувачів, у якого age менше 18.
+
+// const users = [
+//   { name: "Іван", age: 25 },
+//   { name: "Марія", age: 17 },
+//   { name: "Олег", age: 30 }
+// ]
+// function foo(arr) {
+//     return arr.find(user => user.age < 18);
+// }
+// console.log(foo(users));
+//!====================================================
+// function foo(arr) {
+//     return arr.sort((a, b) => b - a);
+// }
+// console.log(foo([1, 22, 3, 5, 10, 15]));
+//!====================================================
+//Знайди середню зарплату всіх працівників.
+
+// const users = [
+//     { name: "Іван", salary: 500 },
+//     { name: "Марія", salary: 1200 },
+//     { name: "Олег", salary: 800 }
+// ];
+// function averageSalary(arr) {
+//     const totalScore = arr.reduce((acc, user) => acc + user.salary, 0);
+//     return totalScore / users.length;
+// }
+// console.log(averageSalary(users));
+//!====================================================
+//Сума чисел: Напишіть функцію sumArray(numbers, callback), яка приймає масив чисел numbers та колбек callback. 
+//Функція повинна обчислити суму чисел у масиві та передати результат у колбек.
+
+// function sumArray(numbers, callback) {
+//     const sum = numbers.reduce((acc, number) => acc + number, 0);
+//     callback(sum);
+// }
+// sumArray([1, 2, 3, 4, 5], function(result) {
+//     console.log(result);
+// })
+//!====================================================
+//Подвоєння чисел: Напишіть функцію doubleArray(numbers, callback), яка приймає масив чисел numbers та колбек callback.
+// Функція повинна подвоїти кожне число в масиві та передати новий масив у колбек.
+
+// function sumArray(numbers, callback) {
+//     const sum = numbers.map(num => num * 2);
+//     callback(sum);
+// }
+// sumArray([1, 2, 3, 4, 5], function(result) {
+//     console.log(result);
+// })
+//!====================================================
+//Капіталізація рядків: Напишіть функцію capitalizeStrings(strings, callback), яка приймає масив рядків strings та колбек callback
+//Функція повинна перетворити всі рядки в масиві, роблячи першу літеру кожного рядка  великої, і передати 
+//перетворений масив в колбек.
+
+// function capitalizeStrings(strings, callback) {
+//     const firstBigLetter = strings.map(str => str[0].toUpperCase() + str.slice(1));
+//     callback(firstBigLetter);
+// }
+// capitalizeStrings(["hello", "World", "admin"], function(result) {
+//     console.log(result);
+// })
+//!====================================================
+//Сортування чисел: Напишіть функцію sortNumbers(numbers, callback), яка приймає масив чисел numbers та колбек callback.
+// Функція повинна відсортувати числа в масиві за зростанням та передати відсортований масив у колбек.
+
+// function sortNumbers(numbers, callback) {
+//     const sortArr = numbers.sort((a, b) => a - b);
+//     callback(sortArr);
+// }
+// sortNumbers([6, 9, 1, 2, 3, 4, 5], function(result) {
+//     console.log(result);
+// })
+//!====================================================
+//Пошук максимуму: Напишіть функцію findMax(numbers, callback), яка приймає масив чисел numbers та колбек callback.
+// Функція повинна знайти максимальне число в масиві та передати його в колбек.
+
+// function findMax(numbers, callback) {
+//     const max = numbers.reduce((max, current) => (current > max ? current : max), 0);
+//     callback(max);
+// }
+// findMax([3, 7, 2, 9, 5], function(result) {
+//     console.log("Максимальне число:", result); // Виведе: Максимальне число: 9
+// });
+//!====================================================
+//Перевірка на парність: Напишіть функцію checkEven(numbers, callback), яка приймає масив чисел numbers та колбек callback. 
+//Функція повинна перевірити, чи всі числа в масиві парні, і передати результат перевірки колбек.
+
+// function checkEven(numbers, callback) {
+//     const isEven = numbers.every(num => num % 2 === 0);
+//     callback(isEven);
+// }
+// checkEven([1, 2, 3, 4, 5, 6, 7, 8], function (result) {
+//     console.log("Всі числа парні?", result);
+// })
+//!====================================================
+//Об'єднання рядків: Напишіть функцію concatStrings(strings, separator, callback), яка приймає масив рядків strings, рядок 
+//separator та колбек callback. Функція повинна об'єднати рядки з масиву, розділяючи їх переданим роздільником, і передати 
+//рядок, що вийшов, в колбек.
+
+// function concatStrings(strings, separator, callback) {
+//     const str = strings.join(separator);
+//     callback(str);
+// }
+// concatStrings(["Hello", "World", "Javascript"], " /-/ ", function (result) {
+//     console.log(result);
+// })
+//!====================================================
+//Перетворення в числа: Напишіть функцію parseNumbers(strings, callback), яка приймає масив рядків strings та колбек 
+//callback. Функція повинна перетворити кожен рядок з масиву на число і передати новий масив чисел в колбек.
+
+// function parseNumbers(strings, callback) {
+//     const parse = strings.map(num => Number.parseFloat(num));
+//     callback(parse);
+// }
+// parseNumbers(["35", "111", "35.844"], function (result) {
+//     console.log(result);
+//     })
+//!====================================================
+//Підрахунок символів: Напишіть функцію countCharacters(strings, callback), яка приймає масив рядків strings та колбек 
+//callback. Функція повинна підрахувати загальну кількість символів у всіх рядках масиву та передати результат у колбек.
+
+// function countCharacters(strings, callback) {
+//     const allSymbols = strings.join("").length;
+//     callback(allSymbols);
+// }
+// countCharacters(["Hello", "World", "Javascript"], function (result) {
+//     console.log(result);
+// })    
+//5-1 закінчив
