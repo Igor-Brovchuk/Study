@@ -535,17 +535,6 @@
 // }
 // console.log(foo(0, 10));
 //!====================================================
-//Напиши функцію, яка приймає рядок і повертає кількість слів у ньому (слова розділені пробілами).
-
-// function createObj(name, age) {
-//     return {
-//         name: name,
-//         age: age
-//     };
-// }
-// console.log(createPerson("Ігор", 25));
-
-//!====================================================
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // const filteredNumbers = numbers.filter(number => number > 4);
 // console.log(filteredNumbers);
@@ -819,4 +808,295 @@
 // countCharacters(["Hello", "World", "Javascript"], function (result) {
 //     console.log(result);
 // })    
-//5-1 закінчив
+//!====================================================
+// Object
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+// }
+// console.log(person);
+// console.log(person.name);
+
+// person.name = "Chupakabra";
+// console.log(person.name);
+
+// person.placeOfWork = "Inteks";
+// console.log(person);
+
+// delete person.profession;
+// console.log(person);
+
+// console.log(person.hasOwnProperty("profession"));
+//!====================================================
+//Зведення декількох об'єктів: Створіть ще один об'єкт friend, який містить інформацію про вашого друга.
+//Потім об'єднайте властивості об'єкта friend з об'єктом person.
+
+// const friend = {
+//     name: "Magnus",
+//     age: 30,
+//     profession: "manager",
+// }
+// const result = { ...person, ...friend };
+// console.log(result);
+//!====================================================
+//Перебір властивостей: Виведіть всі властивості об'єкта person на консоль у вигляді ключ-значення.
+
+// Object.keys(person).forEach(key => {
+//     console.log(`${key} " - " ${person[key]}`)
+// })
+//!====================================================
+//Методи об'єкта: Додайте до об'єкта person метод привітання, який буде виводити вітання з іменем особи.
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+//     sayHi() {
+//         console.log(`Welcome ${person.name}`);
+//     }
+// }
+// person.sayHi();
+//!====================================================
+//Застосування Object.keys(): Виведіть на консоль масив зі всіма ключами об'єкта person за допомогою функції Object.keys().
+
+// console.log(Object.keys(person));
+//!====================================================
+// Напиши функцію, яка створює об'єкт з ім'ям і віком.
+// Функція повинна приймати два аргументи: ім'я (рядок) і вік (число).
+// Поверни цей об'єкт.
+
+// function createObj() {
+//     const newObject = {
+//         name: "Vasya",
+//         age: 25,
+//     }
+//     return newObject;
+// }
+// console.log(createObj());
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і додає до нього нову властивість "address" (рядок).
+//Поверни оновлений об'єкт.
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+//     }
+
+// function addAddress(obj) {
+//     obj.address = "Rivne";
+//     return obj;
+// }
+// console.log(addAddress(person));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і новий вік.
+//Функція повинна змінити значення властивості "age" в об'єкті на нове значення.
+//Поверни оновлений об'єкт.
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+//     }
+
+// function newAge(obj, newAge) {
+//     obj.age = newAge;
+//     return obj;
+// }
+// console.log(newAge(person, 35));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і видаляє з нього властивість "age".
+//Поверни оновлений об'єкт.
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+//     }
+
+// function deleteAge(obj) {
+//     delete obj.age;
+//     return obj;
+// }
+// console.log(deleteAge(person));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і повертає значення властивості "name".
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+//     }
+
+// function nameValue(obj) {
+//     return obj.name;
+// }
+// console.log(nameValue(person));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і повертає true, якщо властивість "address" існує в об'єкті, і false, якщо ні.
+
+// const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+//     }
+
+// function hasAddress(obj) {
+//     return obj.hasOwnProperty("address") ? true : false;
+// }
+// console.log(hasAddress(person));
+//!====================================================
+//Напиши функцію, яка приймає два об'єкти і об'єднує їх в один.
+//Якщо у об'єктів є однакові властивості, значення другого об'єкта мають замінити значення першого.
+//Поверни результат.
+
+//  const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+// }
+//     const person2 = {
+//     name: "Sasha",
+//     age: 25,
+//     address: "Kyiv",
+// }
+// function concatObj(obj1, obj2) {
+//     return {...obj1, ...obj2};
+//     }
+//     console.log(concatObj(person, person2));
+//!====================================================
+//Напиши функцію, яка створює об'єкт з трьома властивостями: ім'ям, віком і адресою.
+//Якщо ім'я та вік не передані, встанови їх значення за замовчуванням ("Unknown", 0 відповідно).
+//Поверни об'єкт.
+    
+// function createPerson(name = "Unknown", age = 0, address) {
+//     return {
+//         name, age, address: "kyiv"
+//     };
+// }
+// console.log(createPerson());
+//!====================================================
+//Напиши функцію, яка приймає об'єкт та нову властивість "email" (якщо її немає).
+//Якщо в об'єкті вже є "email", нічого не роби.
+//Поверни оновлений об'єкт.
+
+//   const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+// }
+// function foo(obj, email) {
+//     if (!obj.hasOwnProperty("email")) {
+//         obj.email = email;
+//     }
+//     return obj;
+// }
+// console.log(foo(person, "111@gmail.com"));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і змінює тип значення властивості "age" з числа на рядок.Поверни оновлений об'єкт.
+
+//   const person = {
+//     name: "Igor",
+//     age: 25,
+//     profession: "manager",
+// }
+// function changeType(obj) {
+//     obj.age = String(obj.age);
+//     return obj;
+// }
+// console.log(changeType(person));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт і змінює значення властивості "address", але тільки якщо ця властивість вже існує.
+//Якщо її немає, поверни об'єкт без змін.
+
+//   const person = {
+//     name: "Igor",
+//     age: 25,
+//       profession: "manager",
+// }
+// function changeAddress(obj, address) {
+//     if (obj.hasOwnProperty("address")) {
+//         obj.address = address;
+//     }
+//     return obj;
+// }
+// console.log(changeAddress(person, "Rivne"));
+//!====================================================
+//Напиши функцію, яка приймає об'єкт користувача з властивостями name та сity.
+//Та повертає рядок "User {імя користувача} from {місто користувача}!"
+
+// const person = {
+//     name: "Alison Bekker",
+//     city: "Liverpool",
+//     position: "Goalkeeper",
+// }
+// function foo(obj) {
+//     return `${person.position} ${person.name} from ${person.city}`
+// }
+// console.log(foo(person));
+//!====================================================
+//Напиши функцію, яка приймає масив з ключами і значеннями 
+//(наприклад, [["name", "John"], ["age", 25], ["address", "123 Street"]]) і створює об'єкт з цих пар. Поверни об'єкт.
+
+// function createObject(array) {
+//     return Object.fromEntries(array);
+// }
+// console.log(createObject([["name", "John"], ["age", 25], ["address", "123 Street"]]));
+//!====================================================
+//Створіть об'єкт contactBook, який зберігатиме список контактів та надаватиме методи для додавання,
+// видалення та пошуку контактів.
+
+// const contactBook = {
+//     contacts: [
+//         { name: "Vasya", address: "Kyiv" },
+//         { name: "Roman", address: "Rivne" },
+//         { name: "Igor", address: "Dnipro" },   
+//     ],
+
+//     addContact(newName, newAddress) {
+//         const newContact = {
+//             name: newName,
+//             address: newAddress,
+//         };
+//         this.contacts.push(newContact);
+//     },
+
+//     removeContact(removeName) {
+//         const index = this.contacts.findIndex(contact => contact.name === removeName);
+//         this.contacts.splice(index, 1);
+//     },
+    
+//     findContact(findName) {
+//        return this.contacts.find(contact => contact.name === findName);
+//     },
+
+//     getAllContacts() {
+//         return this.contacts;
+//     }
+// }
+// const contact1 = contactBook.addContact("Sasha", "Sidney");
+// const contact2 = contactBook.removeContact("Vasya");
+// console.log(contactBook.findContact("Igor"));
+// console.log(contactBook.getAllContacts());
+//!====================================================
+//Створіть об'єкт rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. 
+//Об'єкт повинен приймати довжини двох сторін під час створення.
+
+// const rectangle = {
+//     width: 5,
+//     height: 10,
+ 
+//     getArea() {
+//         return this.width * this.height;
+//     },
+
+//     getPerimeter() {
+//         return 2 * (this.width + this.height);
+//     }
+// };
+// console.log(rectangle.getArea());
+//!====================================================
+//Створіть об'єкт toDoList, який зберігатиме список задач та надаватиме методи для додавання нових завдань, 
+//позначки задачі як виконаної та виведення списку завдань.
